@@ -42,7 +42,6 @@ namespace MicroCoin {
 			return value;
 		}
 
-
 		public static sbyte ClipTo(this sbyte value, sbyte min, sbyte max) {
 			if (value < min) {
 				return min;
@@ -61,7 +60,6 @@ namespace MicroCoin {
 			return value;
 		}
 
-
 		public static short ClipTo(this short value, short min, short max) {
 			if (value < min) {
 				return min;
@@ -79,7 +77,6 @@ namespace MicroCoin {
 			}
 			return value;
 		}
-
 
 		public static int ClipTo(this int value, int min, int max) {
 			if (value < min) {
@@ -122,6 +119,5 @@ namespace MicroCoin {
 				action();
 			}
 		}
-
 	}
 }
