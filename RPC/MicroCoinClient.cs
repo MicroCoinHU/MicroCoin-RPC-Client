@@ -15,7 +15,6 @@ using MicroCoin.DTO;
 using System.Net.Cache;
 // ReSharper disable InconsistentNaming
 
-
 namespace MicroCoin.RPC {
 	public class MicroCoinClient : IMicroCoinClient {
 		private readonly Uri _url;
@@ -63,7 +62,6 @@ namespace MicroCoin.RPC {
                 ["max"] = max,
             });
         }
-
 
         public virtual AccountDTO[] GetWalletAccounts(string enc_pubkey = null, string b58_pubkey = null, int? start = null, int? max = null) {
 			return Invoke<AccountDTO[]>(ApiMethodName.getwalletaccounts.ToString(), new Dictionary<string, object>() {
@@ -505,10 +503,7 @@ namespace MicroCoin.RPC {
 									var retArr = Array.CreateInstance(typeof(T).GetElementType(), objArr.Length);
 									Array.Copy(objArr, retArr, objArr.Length);
 									return (T) (object)retArr;
-
-
 								}
-
 								//if (jsonResponse.Result is JObject)
 								//return ((JObject) jsonResponse.Result).ToString();
                                 if(typeof(T) == typeof(String))
